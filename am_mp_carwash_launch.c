@@ -182,25 +182,25 @@ Vector3 func_1(int iParam0)
 	int iVar0;
 	
 	iVar0 = iParam0;
-	return Global_25578[iVar0 /*23*/][0 /*3*/];
+	return Global_25622[iVar0 /*23*/][0 /*3*/];
 }
 
 bool func_2()
 {
-	return MISC::IS_BIT_SET(Global_1595693[PLAYER::PLAYER_ID() /*680*/].f_39.f_18, 0);
+	return MISC::IS_BIT_SET(Global_1589291[PLAYER::PLAYER_ID() /*770*/].f_39.f_18, 0);
 }
 
 bool func_3(int iParam0)
 {
-	return MISC::IS_BIT_SET(Global_1595693[iParam0 /*680*/].f_142, 6);
+	return MISC::IS_BIT_SET(Global_1589291[iParam0 /*770*/].f_142, 6);
 }
 
 int func_4()
 {
 	int iVar0;
 	
-	iVar0 = Global_2436181;
-	if (MISC::IS_BIT_SET(Global_1626416[iVar0 /*35*/].f_13, 0) && Global_1626416[iVar0 /*35*/].f_22 == 2)
+	iVar0 = Global_2436641;
+	if (MISC::IS_BIT_SET(Global_1622958[iVar0 /*35*/].f_13, 0) && Global_1622958[iVar0 /*35*/].f_22 == 2)
 	{
 		return 1;
 	}
@@ -216,7 +216,7 @@ int func_5(int iParam0, bool bParam1)
 			return 1;
 		}
 	}
-	if (Global_1595693[iParam0 /*680*/] == -1)
+	if (Global_1589291[iParam0 /*770*/] == -1)
 	{
 		return 0;
 	}
@@ -230,7 +230,7 @@ bool func_6(int iParam0)
 
 bool func_7(int iParam0)
 {
-	return MISC::IS_BIT_SET(Global_1595693[iParam0 /*680*/].f_13.f_1, 0);
+	return MISC::IS_BIT_SET(Global_1589291[iParam0 /*770*/].f_13.f_1, 0);
 }
 
 bool func_8(int iParam0)

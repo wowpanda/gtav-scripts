@@ -88,9 +88,9 @@ void __EntryFunction__()
 						{
 							if (iLocal_32 == 0)
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1) != iLocal_29))
+								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, true), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1) != iLocal_29))
 								{
-									iLocal_29 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1);
+									iLocal_29 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_28, true), 15f, joaat("prop_contr_03b_ld"), 1, 0, 1);
 								}
 								if (ENTITY::DOES_ENTITY_EXIST(iLocal_29))
 								{
@@ -160,9 +160,9 @@ int func_3(int iParam0)
 		iVar0 = 10;
 		iVar1 = (iParam0 - 32);
 	}
-	if (MISC::IS_BIT_SET(Global_104555.f_9055.f_99.f_219[iVar0], iVar1))
+	if (MISC::IS_BIT_SET(Global_105220.f_9056.f_99.f_219[iVar0], iVar1))
 	{
-		MISC::CLEAR_BIT(&(Global_104555.f_9055.f_99.f_219[iVar0]), iVar1);
+		MISC::CLEAR_BIT(&(Global_105220.f_9056.f_99.f_219[iVar0]), iVar1);
 		return 1;
 	}
 	return 0;
@@ -183,11 +183,11 @@ int func_4(int iParam0)
 		iVar0 = 10;
 		iVar1 = (iParam0 - 32);
 	}
-	if (MISC::IS_BIT_SET(Global_104555.f_9055.f_99.f_219[iVar0], iVar1))
+	if (MISC::IS_BIT_SET(Global_105220.f_9056.f_99.f_219[iVar0], iVar1))
 	{
 		return 0;
 	}
-	MISC::SET_BIT(&(Global_104555.f_9055.f_99.f_219[iVar0]), iVar1);
+	MISC::SET_BIT(&(Global_105220.f_9056.f_99.f_219[iVar0]), iVar1);
 	return 1;
 }
 

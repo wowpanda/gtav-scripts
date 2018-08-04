@@ -90,7 +90,7 @@ void func_1()
 	func_21();
 	if (iLocal_29 != -1 && func_20(iLocal_29))
 	{
-		vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, 0) };
+		vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 		vVar1 = { func_19(iLocal_29) };
 		if (SYSTEM::VDIST2(vVar1, vVar0) < IntToFloat(func_18(iLocal_29)))
 		{
@@ -175,7 +175,7 @@ int func_3()
 
 var func_4()
 {
-	return Global_1627537[PLAYER::PLAYER_ID() /*532*/].f_11;
+	return Global_1624079[PLAYER::PLAYER_ID() /*558*/].f_11;
 }
 
 bool func_5(int iParam0, bool bParam1)
@@ -187,16 +187,16 @@ bool func_5(int iParam0, bool bParam1)
 			return 0;
 		}
 	}
-	return Global_1627537[iParam0 /*532*/].f_11 != func_3();
+	return Global_1624079[iParam0 /*558*/].f_11 != func_3();
 }
 
 int func_6(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		if (Global_1627537[iParam0 /*532*/].f_11 != func_3())
+		if (Global_1624079[iParam0 /*558*/].f_11 != func_3())
 		{
-			return Global_1627537[iParam0 /*532*/].f_11 == iParam0;
+			return Global_1624079[iParam0 /*558*/].f_11 == iParam0;
 		}
 	}
 	return 0;
@@ -221,7 +221,7 @@ int func_8(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return Global_1595693[iParam0 /*680*/].f_266.f_241;
+		return Global_1589291[iParam0 /*770*/].f_273.f_249;
 	}
 	return 0;
 }
@@ -230,7 +230,7 @@ int func_9(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return Global_1595693[iParam0 /*680*/].f_266.f_241 != 0;
+		return Global_1589291[iParam0 /*770*/].f_273.f_249 != 0;
 	}
 	return 0;
 }
@@ -239,7 +239,7 @@ void func_10(int iParam0)
 {
 	vector3 vVar0;
 	
-	vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, 0) };
+	vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 	HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(vVar0.x, vVar0.y);
 	switch (iParam0)
 	{
@@ -250,7 +250,7 @@ void func_10(int iParam0)
 			break;
 		
 		case 2:
-			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, 0) };
+			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			HUD::_SET_PLAYER_BLIP_POSITION_THIS_FRAME(vVar0.x, vVar0.y);
 			break;
 		
@@ -275,7 +275,7 @@ int func_11(int iParam0)
 			break;
 		
 		case 1:
-			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, 0) };
+			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			if (vVar0.z < 9.7796f)
 			{
 				return 0;
@@ -291,7 +291,7 @@ int func_11(int iParam0)
 			break;
 		
 		case 2:
-			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, 0) };
+			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			if (vVar0.z < 178.9f)
 			{
 				return 0;
@@ -803,7 +803,7 @@ void func_21()
 		}
 		else
 		{
-			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, 0) };
+			vVar0 = { ENTITY::GET_ENTITY_COORDS(iLocal_31, false) };
 			if (SYSTEM::VDIST2(func_19(iLocal_28), vVar0) < SYSTEM::VDIST2(func_19(iLocal_29), vVar0))
 			{
 				iLocal_29 = iLocal_28;
@@ -830,7 +830,7 @@ int func_23(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2422736[iParam0 /*420*/].f_210, 2))
+	if (MISC::IS_BIT_SET(Global_2423644[iParam0 /*406*/].f_191, 2))
 	{
 		return 1;
 	}
@@ -852,7 +852,7 @@ bool func_25(int iParam0, int iParam1)
 	}
 	else
 	{
-		bVar0 = Global_1595693[iParam0 /*680*/].f_211 == 8;
+		bVar0 = Global_1589291[iParam0 /*770*/].f_211 == 8;
 	}
 	if (iParam1 == 1)
 	{

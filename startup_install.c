@@ -4,14 +4,14 @@ void __EntryFunction__()
 	func_1("main_install", 1424);
 }
 
-void func_1(char* sParam0, int iParam1)
+void func_1(void fParam0, int iParam1)
 {
-	SCRIPT::REQUEST_SCRIPT(sParam0);
-	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
+	SCRIPT::REQUEST_SCRIPT(fParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(fParam0))
 	{
 		SYSTEM::WAIT(0);
-		SCRIPT::REQUEST_SCRIPT(sParam0);
+		SCRIPT::REQUEST_SCRIPT(fParam0);
 	}
-	SYSTEM::START_NEW_SCRIPT(sParam0, iParam1);
+	SYSTEM::START_NEW_SCRIPT(fParam0, iParam1);
 }
 

@@ -61,14 +61,14 @@ void func_1()
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
-void func_2(char* sParam0)
+void func_2(void fParam0)
 {
-	func_3(sParam0);
+	func_3(fParam0);
 }
 
-void func_3(char* sParam0)
+void func_3(void fParam0)
 {
-	if (MISC::ARE_STRINGS_EQUAL(sParam0, sParam0))
+	if (MISC::ARE_STRINGS_EQUAL(fParam0, fParam0))
 	{
 	}
 }

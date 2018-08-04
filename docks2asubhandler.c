@@ -40,7 +40,7 @@ void __EntryFunction__()
 		{
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(iLocal_0, 0))
 			{
-				fVar0 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_0, 1));
+				fVar0 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(iLocal_0, true));
 				if (fVar0 > 90000f)
 				{
 					MISC::SET_BIT(&iLocal_2, 1);

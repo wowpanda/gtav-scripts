@@ -99,11 +99,18 @@
 	var uLocal_97 = 0;
 	var uLocal_98 = 0;
 	var uLocal_99 = 0;
-	int iLocal_100 = 0;
+	var uLocal_100 = 0;
 	var uLocal_101 = 0;
-	var uLocal_102[32] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	struct<5> Local_103 = { 0, 0, 0, 0, 0 } ;
-	struct<21> Local_104 = { 0, -1, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, -1 } ;
+	var uLocal_102 = 0;
+	var uLocal_103 = 0;
+	var uLocal_104 = 0;
+	var uLocal_105 = 0;
+	var uLocal_106 = 0;
+	int iLocal_107 = 0;
+	var uLocal_108 = 0;
+	var uLocal_109[32] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	struct<5> Local_110 = { 0, 0, 0, 0, 0 } ;
+	struct<21> Local_111 = { 0, -1, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, -1 } ;
 #endregion
 
 void __EntryFunction__()
@@ -135,7 +142,7 @@ void __EntryFunction__()
 	fLocal_96 = ((0.05f + 0.275f) - 0.01f);
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		func_47(ScriptParam_104);
+		func_47(ScriptParam_111);
 	}
 	else
 	{
@@ -156,7 +163,7 @@ void __EntryFunction__()
 			}
 			if (!func_26() || func_24(PLAYER::PLAYER_ID(), 0))
 			{
-				if ((((((((!Global_1573920 && !func_23(3)) && !func_20(PLAYER::PLAYER_ID(), 0)) && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS()) && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID())) && !func_18(PLAYER::PLAYER_ID())) && !func_16(func_17(PLAYER::PLAYER_ID()))) && !func_14(PLAYER::PLAYER_ID(), 146)) && !func_10(PLAYER::PLAYER_ID()))
+				if ((((((((!Global_1573962 && !func_23(3)) && !func_20(PLAYER::PLAYER_ID(), 0)) && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS()) && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID())) && !func_18(PLAYER::PLAYER_ID())) && !func_16(func_17(PLAYER::PLAYER_ID()))) && !func_14(PLAYER::PLAYER_ID(), 146)) && !func_10(PLAYER::PLAYER_ID()))
 				{
 					if (func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 4, 100, 0))
 					{
@@ -164,11 +171,11 @@ void __EntryFunction__()
 						{
 							if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
 							{
-								if (!func_8(&(Local_103.f_1)))
+								if (!func_8(&(Local_110.f_1)))
 								{
-									func_5(&(Local_103.f_1));
+									func_5(&(Local_110.f_1));
 								}
-								else if (func_2(&(Local_103.f_1)) > 20f)
+								else if (func_2(&(Local_110.f_1)) > 20f)
 								{
 									if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) < 4)
 									{
@@ -189,9 +196,9 @@ void __EntryFunction__()
 								PLAYER::_0xDC64D2C53493ED12(PLAYER::PLAYER_ID());
 							}
 						}
-						else if (func_8(&(Local_103.f_1)))
+						else if (func_8(&(Local_110.f_1)))
 						{
-							func_1(&(Local_103.f_1));
+							func_1(&(Local_110.f_1));
 						}
 					}
 				}
@@ -543,14 +550,14 @@ int func_12(int iParam0)
 {
 	if (func_13(iParam0, 0))
 	{
-		return Global_1627537[iParam0 /*532*/].f_11.f_33;
+		return Global_1624079[iParam0 /*558*/].f_11.f_33;
 	}
 	return -1;
 }
 
 int func_13(int iParam0, int iParam1)
 {
-	if (Global_1627537[iParam0 /*532*/].f_11.f_33 != -1 || (iParam1 && Global_1627537[iParam0 /*532*/].f_11.f_32 != -1))
+	if (Global_1624079[iParam0 /*558*/].f_11.f_33 != -1 || (iParam1 && Global_1624079[iParam0 /*558*/].f_11.f_32 != -1))
 	{
 		return 1;
 	}
@@ -559,7 +566,7 @@ int func_13(int iParam0, int iParam1)
 
 int func_14(int iParam0, int iParam1)
 {
-	if (Global_1627537[iParam0 /*532*/] == iParam1)
+	if (Global_1624079[iParam0 /*558*/] == iParam1)
 	{
 		return func_15(iParam0);
 	}
@@ -573,7 +580,7 @@ int func_15(int iParam0)
 	iVar0 = iParam0;
 	if (iVar0 != -1)
 	{
-		return MISC::IS_BIT_SET(Global_1627537[iVar0 /*532*/].f_1, 0);
+		return MISC::IS_BIT_SET(Global_1624079[iVar0 /*558*/].f_1, 0);
 	}
 	return 0;
 }
@@ -604,7 +611,7 @@ int func_17(int iParam0)
 	iVar0 = iParam0;
 	if (iVar0 != -1)
 	{
-		return Global_1627537[iVar0 /*532*/];
+		return Global_1624079[iVar0 /*558*/];
 	}
 	return -1;
 }
@@ -622,7 +629,7 @@ int func_18(int iParam0)
 			return 1;
 		}
 	}
-	if (MISC::IS_BIT_SET(Global_2422736[iParam0 /*420*/].f_210, 2))
+	if (MISC::IS_BIT_SET(Global_2423644[iParam0 /*406*/].f_191, 2))
 	{
 		return 1;
 	}
@@ -644,7 +651,7 @@ bool func_20(int iParam0, int iParam1)
 	}
 	else
 	{
-		bVar0 = Global_1595693[iParam0 /*680*/].f_211 == 8;
+		bVar0 = Global_1589291[iParam0 /*770*/].f_211 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -690,7 +697,7 @@ int func_22()
 
 bool func_23(int iParam0)
 {
-	return MISC::IS_BIT_SET(Global_1573919, iParam0);
+	return MISC::IS_BIT_SET(Global_1573961, iParam0);
 }
 
 int func_24(int iParam0, int iParam1)
@@ -706,7 +713,7 @@ int func_24(int iParam0, int iParam1)
 		return 0;
 	}
 	iVar0 = iParam0;
-	if (Global_1595693[iVar0 /*680*/] == iParam1)
+	if (Global_1589291[iVar0 /*770*/] == iParam1)
 	{
 		return 1;
 	}
@@ -721,7 +728,7 @@ int func_25(int iParam0)
 	}
 	else
 	{
-		return MISC::IS_BIT_SET(Global_2436181.f_1, iParam0);
+		return MISC::IS_BIT_SET(Global_2436641.f_1, iParam0);
 	}
 	return 1;
 }
@@ -736,7 +743,7 @@ int func_26()
 	{
 		return 0;
 	}
-	if (Global_1595693[PLAYER::PLAYER_ID() /*680*/] == -1)
+	if (Global_1589291[PLAYER::PLAYER_ID() /*770*/] == -1)
 	{
 		return 0;
 	}
@@ -764,28 +771,28 @@ int func_27()
 
 int func_28()
 {
-	switch (Local_103)
+	switch (Local_110)
 	{
 		case 0:
-			if (Global_1573920 || func_23(3))
+			if (Global_1573962 || func_23(3))
 			{
-				Local_103.f_4 = PED::ADD_SCENARIO_BLOCKING_AREA(1413.703f, 2341.517f, -232.3945f, 2016.209f, 2998.893f, 161.0299f, 0, 1, 1, 1);
+				Local_110.f_4 = PED::ADD_SCENARIO_BLOCKING_AREA(1413.703f, 2341.517f, -232.3945f, 2016.209f, 2998.893f, 161.0299f, 0, 1, 1, 1);
 			}
-			func_29(&(uLocal_102[NETWORK::PARTICIPANT_ID_TO_INT()]), 1);
-			Local_103 = 1;
+			func_29(&(uLocal_109[NETWORK::PARTICIPANT_ID_TO_INT()]), 1);
+			Local_110 = 1;
 			break;
 		
 		case 1:
 			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1693.164f, 2559.616f, 44.5649f) >= 1030225f)
 			{
-				Local_103 = 2;
+				Local_110 = 2;
 			}
 			break;
 		
 		case 2:
-			if (Global_1573920 || func_23(3))
+			if (Global_1573962 || func_23(3))
 			{
-				PED::REMOVE_SCENARIO_BLOCKING_AREA(Local_103.f_4, 0);
+				PED::REMOVE_SCENARIO_BLOCKING_AREA(Local_110.f_4, 0);
 			}
 			return 1;
 			break;
@@ -805,16 +812,16 @@ void func_30(var uParam0, var uParam1)
 
 int func_31()
 {
-	switch (iLocal_100)
+	switch (iLocal_107)
 	{
 		case 0:
-			iLocal_100 = 1;
+			iLocal_107 = 1;
 			break;
 		
 		case 1:
 			if (func_32())
 			{
-				iLocal_100 = 2;
+				iLocal_107 = 2;
 			}
 			break;
 		
@@ -854,7 +861,7 @@ int func_33()
 	{
 		return 1;
 	}
-	if (Global_2459061)
+	if (Global_2459932)
 	{
 		return 1;
 	}
@@ -904,12 +911,12 @@ int func_34()
 
 int func_35()
 {
-	return Global_25233;
+	return Global_25277;
 }
 
 bool func_36()
 {
-	return Global_2447174.f_586;
+	return Global_2447942.f_586;
 }
 
 int func_37(int iParam0)
@@ -923,12 +930,12 @@ int func_37(int iParam0)
 
 bool func_38()
 {
-	return Global_2456830;
+	return Global_2457699;
 }
 
 bool func_39()
 {
-	return Global_2447174.f_581;
+	return Global_2447942.f_581;
 }
 
 void func_40(var uParam0)
@@ -947,13 +954,13 @@ void func_40(var uParam0)
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
 			switch (iVar2)
 			{
-				case -1155637934:
+				case 1113296425:
 					func_41(iVar0);
 					break;
 				
-				case 1662227603:
+				case -319074860:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &vVar3, 4);
-					if (vVar3.z == 1204917378)
+					if (vVar3.z == -1987561915)
 					{
 						*uParam0 = 1;
 					}
@@ -1042,7 +1049,7 @@ int func_43(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2436181.f_3[iVar0])
+				if (!Global_2436641.f_3[iVar0])
 				{
 					return 0;
 				}
@@ -1072,8 +1079,8 @@ void func_47(struct<21> Param0)
 {
 	func_51(func_52(Param0), Param0);
 	func_49(0, -1, 0);
-	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_100, 2);
-	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_102, 33);
+	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_107, 2);
+	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_109, 33);
 	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(0);
 	if (!func_48())
 	{
@@ -1486,6 +1493,39 @@ int func_52(int iParam0)
 		case 112:
 			return 8;
 		
+		case 113:
+			return 32;
+		
+		case 114:
+			return 8;
+		
+		case 115:
+			return 8;
+		
+		case 116:
+			return 8;
+		
+		case 117:
+			return 8;
+		
+		case 118:
+			return 32;
+		
+		case 119:
+			return 32;
+		
+		case 120:
+			return 32;
+		
+		case 121:
+			return 32;
+		
+		case 122:
+			return 8;
+		
+		case 123:
+			return 8;
+		
 		case 12:
 			return 32;
 		
@@ -1549,10 +1589,10 @@ int func_52(int iParam0)
 		case 17:
 			return 2;
 		
-		case 113:
+		case 124:
 			return 32;
 		
-		case 114:
+		case 125:
 			return 32;
 		
 		case 19:
@@ -1576,43 +1616,19 @@ int func_52(int iParam0)
 		case 21:
 			return 32;
 		
-		case 125:
+		case 136:
+			return 32;
+		
+		case 137:
 			return 32;
 		
 		case 126:
 			return 32;
 		
-		case 115:
-			return 32;
-		
-		case 116:
-			return 32;
-		
-		case 120:
-			return 32;
-		
-		case 118:
-			return 32;
-		
-		case 119:
-			return 32;
-		
-		case 123:
-			return 32;
-		
-		case 124:
-			return 32;
-		
-		case 121:
-			return 32;
-		
-		case 122:
-			return 32;
-		
 		case 127:
 			return 32;
 		
-		case 128:
+		case 131:
 			return 32;
 		
 		case 129:
@@ -1621,48 +1637,72 @@ int func_52(int iParam0)
 		case 130:
 			return 32;
 		
-		case 131:
-			return 2;
-		
-		case 136:
-			return 1;
-		
-		case 132:
-			return 2;
-		
-		case 133:
-			return 4;
-		
 		case 134:
-			return 2;
+			return 32;
 		
 		case 135:
-			return 2;
+			return 32;
 		
-		case 117:
-			return 1;
+		case 132:
+			return 32;
 		
-		case 137:
-			return 2;
+		case 133:
+			return 32;
 		
 		case 138:
+			return 32;
+		
 		case 139:
+			return 32;
+		
 		case 140:
+			return 32;
+		
 		case 141:
+			return 32;
+		
 		case 142:
-		case 143:
-			return 0;
+			return 2;
 		
 		case 147:
 			return 1;
+		
+		case 143:
+			return 2;
 		
 		case 144:
 			return 4;
 		
 		case 145:
-			return 16;
+			return 2;
 		
 		case 146:
+			return 2;
+		
+		case 128:
+			return 1;
+		
+		case 148:
+			return 2;
+		
+		case 149:
+		case 150:
+		case 151:
+		case 152:
+		case 153:
+		case 154:
+			return 0;
+		
+		case 158:
+			return 1;
+		
+		case 155:
+			return 4;
+		
+		case 156:
+			return 16;
+		
+		case 157:
 			return 32;
 		
 		default:

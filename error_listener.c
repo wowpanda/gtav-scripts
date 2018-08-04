@@ -70,10 +70,10 @@ void func_2()
 
 int func_3(int iParam0)
 {
-	if (Global_25507.f_31 < 10)
+	if (Global_25551.f_31 < 10)
 	{
-		Global_25507[Global_25507.f_31 /*3*/] = { *iParam0 };
-		Global_25507.f_31++;
+		Global_25551[Global_25551.f_31 /*3*/] = { *iParam0 };
+		Global_25551.f_31++;
 		return 1;
 	}
 	return 0;
@@ -83,9 +83,9 @@ int func_4(int iParam0, var uParam1)
 {
 	*uParam1 = 0;
 	*uParam1 = 0;
-	while (*uParam1 < Global_25507.f_31)
+	while (*uParam1 < Global_25551.f_31)
 	{
-		if (Global_25507[*uParam1 /*3*/] == *iParam0 && Global_25507[*uParam1 /*3*/].f_2 == iParam0->f_2)
+		if (Global_25551[*uParam1 /*3*/] == *iParam0 && Global_25551[*uParam1 /*3*/].f_2 == iParam0->f_2)
 		{
 			return 1;
 		}

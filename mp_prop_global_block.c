@@ -27,12 +27,12 @@ void __EntryFunction__()
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	Global_1281958 = -1;
+	Global_1289908 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	iVar0 = 0;
-	while (iVar0 < 118)
+	while (iVar0 < 122)
 	{
-		func_1(&(Global_1049531[iVar0 /*1951*/]), iVar0);
+		func_1(&(Global_1049673[iVar0 /*1951*/]), iVar0);
 		iVar0++;
 	}
 }
@@ -11132,9 +11132,9 @@ int func_34(int iParam0)
 		}
 		func_35(&sVar2, iParam0, iVar0, bVar1);
 		iVar3 = MISC::GET_HASH_KEY(&sVar2);
-		if (NETSHOP::_NETWORK_SHOP_DOES_ITEM_EXIST_HASH(iVar3))
+		if (unk_0xC6B9379BC3D78D6D(iVar3))
 		{
-			iVar4 = NETSHOP::_NETWORK_SHOP_GET_PRICE(iVar3, 426439576, 1);
+			iVar4 = unk_0xA5AED7381EAD31DF(iVar3, 426439576, 1);
 			Var5 = { func_33(iParam0) };
 			return iVar4;
 		}
@@ -11434,130 +11434,130 @@ int func_34(int iParam0)
 			break;
 		
 		case 73:
-			return Global_262145.f_12180;
+			return Global_262145.f_12229;
 		
 		case 74:
-			return Global_262145.f_12181;
+			return Global_262145.f_12230;
 		
 		case 75:
-			return Global_262145.f_12182;
+			return Global_262145.f_12231;
 		
 		case 76:
-			return Global_262145.f_12183;
+			return Global_262145.f_12232;
 		
 		case 77:
-			return Global_262145.f_12184;
+			return Global_262145.f_12233;
 		
 		case 78:
-			return Global_262145.f_12185;
+			return Global_262145.f_12234;
 		
 		case 79:
-			return Global_262145.f_12186;
+			return Global_262145.f_12235;
 		
 		case 80:
-			return Global_262145.f_12187;
+			return Global_262145.f_12236;
 		
 		case 81:
-			return Global_262145.f_12188;
+			return Global_262145.f_12237;
 		
 		case 82:
-			return Global_262145.f_12189;
+			return Global_262145.f_12238;
 		
 		case 83:
-			return Global_262145.f_12177;
+			return Global_262145.f_12226;
 		
 		case 84:
-			return Global_262145.f_12178;
+			return Global_262145.f_12227;
 		
 		case 85:
-			return Global_262145.f_12179;
+			return Global_262145.f_12228;
 		
 		case 86:
 			return 27000000;
 		
 		case 87:
-			return Global_262145.f_14759;
+			return Global_262145.f_14808;
 		
 		case 88:
-			return Global_262145.f_14760;
+			return Global_262145.f_14809;
 		
 		case 89:
-			return Global_262145.f_14761;
+			return Global_262145.f_14810;
 		
 		case 90:
-			return Global_262145.f_14762;
+			return Global_262145.f_14811;
 		
 		case 91:
-			return Global_262145.f_16842;
+			return Global_262145.f_16891;
 		
 		case 92:
-			return Global_262145.f_16844;
+			return Global_262145.f_16893;
 		
 		case 93:
-			return Global_262145.f_16840;
+			return Global_262145.f_16889;
 		
 		case 94:
-			return Global_262145.f_16849;
+			return Global_262145.f_16898;
 		
 		case 95:
-			return Global_262145.f_16846;
+			return Global_262145.f_16895;
 		
 		case 96:
-			return Global_262145.f_16848;
+			return Global_262145.f_16897;
 		
 		case 97:
-			return Global_262145.f_16841;
+			return Global_262145.f_16890;
 		
 		case 98:
-			return Global_262145.f_16839;
+			return Global_262145.f_16888;
 		
 		case 99:
-			return Global_262145.f_16838;
+			return Global_262145.f_16887;
 		
 		case 100:
-			return Global_262145.f_16847;
+			return Global_262145.f_16896;
 		
 		case 101:
-			return Global_262145.f_16845;
+			return Global_262145.f_16894;
 		
 		case 102:
-			return Global_262145.f_16843;
+			return Global_262145.f_16892;
 		
 		case 103:
-			return Global_262145.f_18480;
+			return Global_262145.f_18553;
 		
 		case 104:
-			return Global_262145.f_18373;
+			return Global_262145.f_18446;
 		
 		case 105:
-			return Global_262145.f_18374;
+			return Global_262145.f_18447;
 		
 		case 106:
-			return Global_262145.f_18480;
+			return Global_262145.f_18553;
 		
 		case 107:
-			return Global_262145.f_18373;
+			return Global_262145.f_18446;
 		
 		case 108:
-			return Global_262145.f_18374;
+			return Global_262145.f_18447;
 		
 		case 109:
-			return Global_262145.f_18480;
+			return Global_262145.f_18553;
 		
 		case 110:
-			return Global_262145.f_18373;
+			return Global_262145.f_18446;
 		
 		case 111:
-			return Global_262145.f_18374;
+			return Global_262145.f_18447;
 		
 		case 112:
-			return Global_262145.f_18480;
+			return Global_262145.f_18553;
 		
 		case 113:
-			return Global_262145.f_18373;
+			return Global_262145.f_18446;
 		
 		case 114:
-			return Global_262145.f_18374;
+			return Global_262145.f_18447;
 		
 		case 115:
 			return 3000000;
@@ -11600,7 +11600,7 @@ bool func_37()
 
 int func_38()
 {
-	switch (unk_0x155467ACA0F55705())
+	switch (NETWORK::_0xC64DED7EF0D2FE37())
 	{
 		case 1:
 		case 2:
@@ -11615,7 +11615,7 @@ int func_38()
 
 int func_39()
 {
-	switch (unk_0x754615490A029508())
+	switch (unk_0x155467ACA0F55705())
 	{
 		case 1:
 		case 2:
@@ -11682,7 +11682,7 @@ int func_41()
 	}
 	if (STATS::STAT_SLOT_IS_LOADED(0))
 	{
-		if (Global_143075.f_3)
+		if (Global_143857.f_3)
 		{
 			iVar2 = joaat("mpply_plat_up_lb_check");
 			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
@@ -11706,7 +11706,7 @@ int func_41()
 	{
 		if (NETWORK::_NETWORK_ARE_ROS_AVAILABLE())
 		{
-			if (NETWORK::_0x91B87C55093DE351())
+			if (NETWORK::_0x36391F397731595D())
 			{
 				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar4, -1);
 				MISC::SET_BIT(&iVar4, 1);
@@ -11738,7 +11738,7 @@ int func_42()
 	{
 		if (NETWORK::_NETWORK_ARE_ROS_AVAILABLE())
 		{
-			if (NETWORK::_0x593570C289A77688())
+			if (NETWORK::_0x91B87C55093DE351())
 			{
 				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				MISC::SET_BIT(&iVar0, 2);
@@ -11758,11 +11758,11 @@ int func_42()
 			}
 		}
 	}
-	if (Global_143074 == 2)
+	if (Global_143856 == 2)
 	{
 		return 1;
 	}
-	else if (Global_143074 == 3)
+	else if (Global_143856 == 3)
 	{
 		return 0;
 	}
@@ -11780,7 +11780,7 @@ int func_43()
 {
 	if (MISC::IS_PC_VERSION())
 	{
-		return unk_0x7D2708796355B20B();
+		return unk_0xC9D803F7D7E10861();
 	}
 	return 0;
 }

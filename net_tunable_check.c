@@ -44,11 +44,11 @@ void __EntryFunction__()
 	sLocal_20 = "NULL";
 	while (true)
 	{
-		if (func_6() || Global_1677759 == 1)
+		if (func_6() || Global_1675990 == 1)
 		{
 			func_5();
 		}
-		if (func_1(&uLocal_21, &Global_285060))
+		if (func_1(&uLocal_21, &Global_286288))
 		{
 			func_5();
 		}
@@ -21506,7 +21506,7 @@ int func_6()
 	{
 		return 1;
 	}
-	if (Global_2459061)
+	if (Global_2459932)
 	{
 		return 1;
 	}
@@ -21556,12 +21556,12 @@ int func_7()
 
 int func_8()
 {
-	return Global_25233;
+	return Global_25277;
 }
 
 bool func_9()
 {
-	return Global_2447174.f_586;
+	return Global_2447942.f_586;
 }
 
 int func_10(int iParam0)
@@ -21575,12 +21575,12 @@ int func_10(int iParam0)
 
 bool func_11()
 {
-	return Global_2456830;
+	return Global_2457699;
 }
 
 bool func_12()
 {
-	return Global_2447174.f_581;
+	return Global_2447942.f_581;
 }
 
 void func_13(var uParam0)
@@ -21599,13 +21599,13 @@ void func_13(var uParam0)
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
 			switch (iVar2)
 			{
-				case -1155637934:
+				case 1113296425:
 					func_14(iVar0);
 					break;
 				
-				case 1662227603:
+				case -319074860:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &vVar3, 4);
-					if (vVar3.z == 1204917378)
+					if (vVar3.z == -1987561915)
 					{
 						*uParam0 = 1;
 					}
@@ -21694,7 +21694,7 @@ int func_16(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2436181.f_3[iVar0])
+				if (!Global_2436641.f_3[iVar0])
 				{
 					return 0;
 				}

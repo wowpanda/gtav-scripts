@@ -3,18 +3,18 @@
 	int iLocal_1 = 0;
 	vector3 vLocal_2 = { 0f, 0f, 0f };
 	float fLocal_3 = 0f;
-	char* sLocal_4 = NULL;
+	void fLocal_4 = 0;
 	int iLocal_5 = 0;
-	char* sLocal_6 = NULL;
+	void fLocal_6 = 0;
 	int iLocal_7 = 0;
 	int iLocal_8 = 0;
 #endregion
 
 void __EntryFunction__()
 {
-	sLocal_4 = "Poledance_01";
+	fLocal_4 = "Poledance_01";
 	iLocal_5 = joaat("a_f_y_beach_01");
-	sLocal_6 = "MISSSTRIP_CLUB";
+	fLocal_6 = "MISSSTRIP_CLUB";
 	if (ENTITY::DOES_ENTITY_EXIST(iScriptParam_8))
 	{
 		ENTITY::FREEZE_ENTITY_POSITION(iScriptParam_8, true);
@@ -123,17 +123,17 @@ void func_3()
 	{
 		if (BRAIN::GET_SCRIPT_TASK_STATUS(iLocal_1, -2017877118) == 7)
 		{
-			BRAIN::TASK_PLAY_ANIM(iLocal_1, sLocal_6, sLocal_4, 8f, -8f, -1, 0, 0, 0, 0, 0);
+			BRAIN::TASK_PLAY_ANIM(iLocal_1, fLocal_6, fLocal_4, 8f, -8f, -1, 0, 0, 0, 0, 0);
 		}
-		else if (ENTITY::HAS_ENTITY_ANIM_FINISHED(iLocal_1, sLocal_6, sLocal_4, 3))
+		else if (ENTITY::HAS_ENTITY_ANIM_FINISHED(iLocal_1, fLocal_6, fLocal_4, 3))
 		{
-			BRAIN::TASK_PLAY_ANIM(iLocal_1, sLocal_6, sLocal_4, 8f, -8f, -1, 0, 0, 0, 0, 0);
+			BRAIN::TASK_PLAY_ANIM(iLocal_1, fLocal_6, fLocal_4, 8f, -8f, -1, 0, 0, 0, 0, 0);
 		}
 		else if (!iLocal_7)
 		{
-			if (ENTITY::IS_ENTITY_PLAYING_ANIM(iLocal_1, sLocal_6, sLocal_4, 3))
+			if (ENTITY::IS_ENTITY_PLAYING_ANIM(iLocal_1, fLocal_6, fLocal_4, 3))
 			{
-				ENTITY::SET_ENTITY_ANIM_CURRENT_TIME(iLocal_1, sLocal_6, sLocal_4, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 1f));
+				ENTITY::SET_ENTITY_ANIM_CURRENT_TIME(iLocal_1, fLocal_6, fLocal_4, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 1f));
 				iLocal_7 = 1;
 			}
 		}
@@ -154,15 +154,15 @@ void func_4()
 int func_5()
 {
 	STREAMING::REQUEST_MODEL(iLocal_5);
-	STREAMING::REQUEST_ANIM_DICT(sLocal_6);
-	if (STREAMING::HAS_MODEL_LOADED(iLocal_5) && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_6))
+	STREAMING::REQUEST_ANIM_DICT(fLocal_6);
+	if (STREAMING::HAS_MODEL_LOADED(iLocal_5) && STREAMING::HAS_ANIM_DICT_LOADED(fLocal_6))
 	{
 		return 1;
 	}
 	else
 	{
 		STREAMING::REQUEST_MODEL(iLocal_5);
-		STREAMING::REQUEST_ANIM_DICT(sLocal_6);
+		STREAMING::REQUEST_ANIM_DICT(fLocal_6);
 	}
 	return 0;
 }

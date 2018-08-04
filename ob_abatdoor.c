@@ -22,7 +22,7 @@ void __EntryFunction__()
 	if (ENTITY::DOES_ENTITY_EXIST(iScriptParam_6))
 	{
 		ENTITY::FREEZE_ENTITY_POSITION(iScriptParam_6, true);
-		vLocal_4 = { ENTITY::GET_ENTITY_COORDS(iScriptParam_6, 1) };
+		vLocal_4 = { ENTITY::GET_ENTITY_COORDS(iScriptParam_6, true) };
 		vLocal_5 = { ENTITY::GET_ENTITY_ROTATION(iScriptParam_6, 2) };
 	}
 	while (true)
@@ -69,7 +69,7 @@ void __EntryFunction__()
 						{
 							if (SCRIPT::_GET_NUMBER_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(joaat("michael2")) > 0)
 							{
-								if (Global_89409)
+								if (Global_89531)
 								{
 									if (STREAMING::HAS_ANIM_DICT_LOADED("map_objects"))
 									{
@@ -86,7 +86,7 @@ void __EntryFunction__()
 						vVar0 = { vLocal_4 + Vector(3.45f, 0f, 0f) };
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_3))
 						{
-							vVar1 = { ENTITY::GET_ENTITY_COORDS(iLocal_3, 1) };
+							vVar1 = { ENTITY::GET_ENTITY_COORDS(iLocal_3, true) };
 							if (!func_2(vVar1, vVar0, 0.1f, 0))
 							{
 								vVar2 = { vVar0 - vVar1 };
@@ -94,7 +94,7 @@ void __EntryFunction__()
 							}
 							else
 							{
-								Global_89410 = 1;
+								Global_89532 = 1;
 								iLocal_2 = 4;
 							}
 						}
@@ -185,14 +185,14 @@ void func_4()
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
-void func_5(char* sParam0)
+void func_5(void fParam0)
 {
-	func_6(sParam0);
+	func_6(fParam0);
 }
 
-void func_6(char* sParam0)
+void func_6(void fParam0)
 {
-	if (MISC::ARE_STRINGS_EQUAL(sParam0, sParam0))
+	if (MISC::ARE_STRINGS_EQUAL(fParam0, fParam0))
 	{
 	}
 }

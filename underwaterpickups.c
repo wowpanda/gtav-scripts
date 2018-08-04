@@ -41,7 +41,7 @@ void __EntryFunction__()
 	}
 	func_24(vVar0);
 	bLocal_4 = func_4();
-	vLocal_5 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0) };
+	vLocal_5 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 	func_1();
 	while (true)
 	{
@@ -974,16 +974,16 @@ int func_3(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
 
 int func_4()
 {
-	if (Global_2458243 == -15)
+	if (Global_2459113 == -15)
 	{
-		Global_2458243 = func_23();
-		func_15(&Global_2458243, 0, 0, 0, 1, 0, 0);
+		Global_2459113 = func_23();
+		func_15(&Global_2459113, 0, 0, 0, 1, 0, 0);
 		return 1;
 	}
-	if (func_5(func_23(), Global_2458243))
+	if (func_5(func_23(), Global_2459113))
 	{
-		Global_2458243 = func_23();
-		func_15(&Global_2458243, 0, 0, 0, 1, 0, 0);
+		Global_2459113 = func_23();
+		func_15(&Global_2459113, 0, 0, 0, 1, 0, 0);
 		return 1;
 	}
 	return 0;

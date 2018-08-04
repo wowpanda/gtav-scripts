@@ -223,11 +223,11 @@ void func_10(int iParam0)
 	GRAPHICS::_POP_SCALEFORM_MOVIE_FUNCTION_VOID();
 }
 
-void func_11(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, bool bParam6)
+void func_11(int iParam0, void fParam1, int iParam2, int iParam3, int iParam4, int iParam5, bool bParam6)
 {
 	iParam0->f_1 = -1;
 	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION(*iParam0, "SPLASH_TEXT_LABEL");
-	func_12(sParam1);
+	func_12(fParam1);
 	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(iParam2);
 	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(iParam3);
 	GRAPHICS::_PUSH_SCALEFORM_MOVIE_FUNCTION_PARAMETER_INT(iParam4);
@@ -240,9 +240,9 @@ void func_11(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, 
 	}
 }
 
-void func_12(char* sParam0)
+void func_12(void fParam0)
 {
-	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(fParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 }
 
