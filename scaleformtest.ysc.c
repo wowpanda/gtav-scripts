@@ -1,0 +1,391 @@
+#region Local Var
+	var uLocal_0 = 0;
+	var uLocal_1 = 0;
+	int iLocal_2 = 0;
+	int iLocal_3 = 0;
+	int iLocal_4 = 0;
+	int iLocal_5 = 0;
+	int iLocal_6 = 0;
+	int iLocal_7 = 0;
+	int iLocal_8 = 0;
+	int iLocal_9 = 0;
+	int iLocal_10 = 0;
+	int iLocal_11 = 0;
+	var uLocal_12 = 0;
+	var uLocal_13 = 0;
+	float fLocal_14 = 0f;
+	var uLocal_15 = 0;
+	var uLocal_16 = 0;
+	int iLocal_17 = 0;
+	int iLocal_18 = 0;
+	int iLocal_19 = 0;
+#endregion
+
+void __EntryFunction__()//Position - 0x0
+{
+	iLocal_2 = 1;
+	iLocal_3 = 134;
+	iLocal_4 = 134;
+	iLocal_5 = 1;
+	iLocal_6 = 1;
+	iLocal_7 = 1;
+	iLocal_8 = 134;
+	iLocal_9 = 1;
+	iLocal_10 = 12;
+	iLocal_11 = 12;
+	fLocal_14 = 0.001f;
+	iLocal_17 = 4294967295;
+	if (CAM::IS_SCREEN_FADED_OUT())
+	{
+		CAM::DO_SCREEN_FADE_IN(500);
+	}
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
+	{
+		func_5();
+	}
+	iLocal_19 = unk_0x9934FEFB3B8C6DB8("instructional_buttons");
+	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_19))
+	{
+		SYSTEM::WAIT(0);
+	}
+	while (true)
+	{
+		GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_19, 255, 255, 255, 0, 0);
+		func_4();
+		func_1(iLocal_18, iLocal_19);
+		SYSTEM::WAIT(0);
+	}
+}
+
+void func_1(int iParam0, int iParam1)//Position - 0x8D
+{
+	switch (iParam0)
+	{
+		case 0:
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "CLEAR_ALL");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_CLEAR_SPACE");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(200);
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 191, true));
+			func_2("PRESS A");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(1);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 194, true));
+			func_2("PRESS B");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(2);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 193, true));
+			func_2("PRESS X");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(3);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 192, true));
+			func_2("PRESS Y");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_BACKGROUND_COLOUR");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(80);
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			iLocal_18 = 4294967295;
+			break;
+		
+		case 1:
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "CLEAR_ALL");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_CLEAR_SPACE");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(200);
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 187, true));
+			func_2("DOWN");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(1);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 188, true));
+			func_2("UP");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(2);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 190, true));
+			func_2("LEFT");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(3);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 189, true));
+			func_2("RIGHT");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_BACKGROUND_COLOUR");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(80);
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			iLocal_18 = 4294967295;
+			break;
+		
+		case 2:
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "CLEAR_ALL");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_CLEAR_SPACE");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(200);
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_DATA_SLOT");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			func_3(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTON(2, 202, true));
+			func_2("BACK");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "DRAW_INSTRUCTIONAL_BUTTONS");
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam1, "SET_BACKGROUND_COLOUR");
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(0);
+			GRAPHICS::REMOVE_DECALS_FROM_VEHICLE(80);
+			CAM::_ENABLE_CROSSHAIR_THIS_FRAME();
+			iLocal_18 = 4294967295;
+			break;
+		
+		default:
+			break;
+	}
+}
+
+void func_2(char* sParam0)//Position - 0x312
+{
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
+	CAM::_DISABLE_VEHICLE_FIRST_PERSON_CAM_THIS_FRAME();
+}
+
+void func_3(char* sParam0)//Position - 0x324
+{
+	GRAPHICS::_PUSH_SCALEFORM_MOVIE_METHOD_PARAMETER_BUTTON_NAME(sParam0);
+}
+
+void func_4()//Position - 0x332
+{
+	if (Global_389C == 0)
+	{
+		if (((((((((PAD::IS_CONTROL_PRESSED(2, 189) || PAD::IS_CONTROL_PRESSED(2, 190)) || PAD::IS_CONTROL_PRESSED(2, 188)) || PAD::IS_CONTROL_PRESSED(2, 187)) || PAD::IS_CONTROL_PRESSED(2, 205)) || PAD::IS_CONTROL_PRESSED(2, 206)) || PAD::IS_CONTROL_PRESSED(2, 207)) || PAD::IS_CONTROL_PRESSED(2, 208)) || PAD::IS_CONTROL_PRESSED(2, 201)) || PAD::IS_CONTROL_PRESSED(2, 202))
+		{
+			Global_389C = 1;
+			SYSTEM::SETTIMERA(0);
+		}
+	}
+	else if (SYSTEM::TIMERA() > 50)
+	{
+		Global_389C = 0;
+	}
+	if (Global_389C == 0)
+	{
+		if (PAD::IS_CONTROL_PRESSED(2, 217))
+		{
+			iLocal_18 = 1;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 189))
+		{
+			iLocal_18 = 2;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 190))
+		{
+			iLocal_18 = 2;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 205))
+		{
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 206))
+		{
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 207))
+		{
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 208))
+		{
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 188))
+		{
+			iLocal_18 = 2;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 187))
+		{
+			iLocal_18 = 2;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 201))
+		{
+			iLocal_18 = 1;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 202))
+		{
+			iLocal_18 = 0;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 203))
+		{
+			iLocal_18 = 1;
+		}
+		if (PAD::IS_CONTROL_PRESSED(2, 204))
+		{
+			iLocal_18 = 1;
+		}
+	}
+}
+
+void func_5()//Position - 0x47D
+{
+	func_6(0);
+	MISC::SET_GAME_PAUSED(0);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_19);
+	HUD::DISPLAY_SNIPER_SCOPE_THIS_FRAME();
+}
+
+void func_6(bool bParam0)//Position - 0x499
+{
+	if (bParam0)
+	{
+		func_12();
+		if (Global_38B1.f_1 == 10 || Global_38B1.f_1 == 9)
+		{
+			MISC::SET_BIT(&Global_950, 16);
+		}
+		Global_38B1.f_1 = 1;
+		if (func_11(0))
+		{
+			func_7(0);
+		}
+	}
+	else if (Global_38B1.f_1 == 1)
+	{
+		if (!Global_38B1.f_1 == 0)
+		{
+			Global_38B1.f_1 = 3;
+		}
+	}
+}
+
+void func_7(int iParam0)//Position - 0x4FC
+{
+	if (func_10())
+	{
+		return;
+	}
+	if (Global_3959)
+	{
+		func_9(0, 0);
+	}
+	if (Global_38B1.f_1 == 10 || Global_38B1.f_1 == 9)
+	{
+		MISC::SET_BIT(&Global_950, 16);
+	}
+	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
+	{
+		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
+	}
+	Global_3DCE = 5;
+	if (iParam0 == 1)
+	{
+		MISC::SET_BIT(&Global_94F, 30);
+	}
+	else
+	{
+		GRAPHICS::_0x35FB78DC42B7BD21(&Global_94F, 30);
+	}
+	if (!func_8())
+	{
+		Global_38B1.f_1 = 3;
+	}
+}
+
+int func_8()//Position - 0x576
+{
+	if (Global_38B1.f_1 == 1 || Global_38B1.f_1 == 0)
+	{
+		return 1;
+	}
+	return 0;
+}
+
+void func_9(bool bParam0, bool bParam1)//Position - 0x59D
+{
+	if (bParam0)
+	{
+		if (func_11(0))
+		{
+			Global_3959 = 1;
+			if (bParam1)
+			{
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_3872);
+			}
+			Global_3869 = { Global_387B[Global_387A /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_3869);
+		}
+	}
+	else if (Global_3959 == 1)
+	{
+		Global_3959 = 0;
+		Global_3869 = { Global_3882[Global_387A /*3*/] };
+		if (bParam1)
+		{
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_3872);
+		}
+		else
+		{
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_3869);
+		}
+	}
+}
+
+bool func_10()//Position - 0x611
+{
+	return INTERIOR::_GET_ROOM_KEY_FROM_GAMEPLAY_CAM(Global_199D01, 19);
+}
+
+int func_11(int iParam0)//Position - 0x623
+{
+	if (iParam0 == 1)
+	{
+		if (Global_38B1.f_1 > 3)
+		{
+			if (INTERIOR::_GET_ROOM_KEY_FROM_GAMEPLAY_CAM(Global_94F, 14))
+			{
+				return 1;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	if (SCRIPT::_GET_NUMBER_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(joaat("cellphone_flashhand")) > 0)
+	{
+		return 1;
+	}
+	if (Global_38B1.f_1 > 3)
+	{
+		return 1;
+	}
+	return 0;
+}
+
+void func_12()//Position - 0x67D
+{
+	if (Global_38B1.f_1 == 9 || Global_38B1.f_1 == 10)
+	{
+		Global_3E03 = 0;
+		Global_3DFF = 1;
+	}
+}
+
